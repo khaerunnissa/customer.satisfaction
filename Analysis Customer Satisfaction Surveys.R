@@ -54,6 +54,7 @@ usia <-ggplot(demography1, aes(usiar))
 usia <- usia + geom_bar() + labs(x = "Rentang Usia" , y = "Jumlah Konsumen", title = "Konsumen Berdasarkan Rentang Usia")
 usia
 
+## Based on the demographics of brand A consumer respondents, most of them are located in the city of Surabaya, female, age range 19-43 years, with married status, and high school education level.
 
 # 2.Uji Validasi dan Reliabilitas pada Kepuasan Konsumen
 # a. dataset kepuasan konsumen
@@ -77,6 +78,8 @@ cor(puas1)
 library(psych)
 psych::alpha(puas1)
 
+## Based on the validity test carried out, the overall level of satisfaction is highly correlated or strongly influenced by the level of consumer satisfaction with prices.
+## And based on the reliability test, the variables used to measure the level of customer satisfaction are reliable or consistent and reliable in various contexts and conditions.
 
 # 3. Tingkat Kepuasan Konsumen Berdasarkan Lokasi
 # a. membuat dataset tingkat kepuasan konsumen berdasarkan lokasi
@@ -110,3 +113,6 @@ aov_model <- dataset3%>%
 dataset3%>%
   aov(avg_puas~kota, data=.)%>%
   TukeyHSD()
+
+## Based on the average value of the level of customer satisfaction in each location, Makassar is the location with the highest average level of satisfaction.
+## Based on ANOVA and Tukey HSD tests, there are significant differences in the level of customer satisfaction based on location. Makassar-Jakarta; Makassar-Bandung; and Makassar-Surabaya are cities that have significantly different levels of satisfaction.
